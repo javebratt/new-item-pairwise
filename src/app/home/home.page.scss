@@ -1,27 +1,20 @@
-#container {
-  text-align: center;
+.new-task {
+  display: block;
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  animation: slideIn 1s forwards;
+  -webkit-animation: slideIn 1s forwards;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+@keyframes slideIn {
+  100% {
+    transform: translateX(0%);
+  }
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+@-webkit-keyframes slideIn {
+  100% {
+    -webkit-transform: translateX(0%);
+  }
 }
