@@ -1,16 +1,10 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title> Song List </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content class="ion-padding">
   <h1 class="ion-text-center">My tasks</h1>
   <ion-list lines="none">
     <ion-card
       class="ion-no-margin ion-margin-bottom"
       *ngFor="let item of taskList$ | async"
-      [ngClass]="{'new-task': item.wasAdded}"
+      [ngClass]="{'new-task': item.wasAdded }"
     >
       <ion-card-header>
         <ion-card-title>{{ item.title }}</ion-card-title>

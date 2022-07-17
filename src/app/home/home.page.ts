@@ -36,14 +36,16 @@ export class HomePage {
       previousIdSet: new Set(previousTasks.map((task) => task.id)),
     })),
     map(({ tasks, previousIdSet }) =>
-      tasks.map((note) => ({
-        ...note,
-        wasAdded: previousIdSet.size > 0 && !previousIdSet.has(note.id),
+      tasks.map((task) => ({
+        ...task,
+        wasAdded: previousIdSet.size > 0 && !previousIdSet.has(task.id),
       }))
     )
   );
 
-  constructor() {}
+  constructor() {
+    this.taskList$.subscribe((tasks) => console.log(tasks));
+  }
 
   confirm() {
     const newTask = {
