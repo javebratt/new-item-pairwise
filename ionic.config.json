@@ -1,0 +1,7 @@
+{
+  "name": "new-items-added",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
